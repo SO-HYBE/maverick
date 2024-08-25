@@ -41,8 +41,8 @@ export default function CreatePost(){
   }, []);
 
     return(
-<main id="contact-section" className="h-[140vh] flex items-center justify-center text-wrap">
-  <div className="font-rubik bg-black flex items-center justify-center h-full relative flex-col w-full px-6 md:px-8 lg:px-12">
+<main id="contact-section" className="flex items-center justify-center text-wrap h-[170vh]">
+  <div className="font-rubik bg-black flex items-center justify-center h-full flex-col w-full px-6 md:px-8 lg:px-12">
     <div className="whitespace-pre relative mb-12 text-center mt-20" ref={createRef}>
       <span className="title-create cursor-default text-white font-belanosima hover:text-black text-5xl sm:text-6xl">Talk </span>
       <span className="title-create cursor-default text-white font-belanosima hover:text-black text-5xl sm:text-6xl">To </span>
