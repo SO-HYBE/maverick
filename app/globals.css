@@ -67,3 +67,35 @@
     @apply bg-background text-foreground;
   }
 }
+
+body{
+  background-color: white;
+  height: 100vh;
+  margin: 0rem;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.main-text{
+  font-size: clamp(3rem, 6vw, 10rem);
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: transform cubic-bezier(1, 0, 0, 1) ease-in;
+}
+
+.rotate-text{
+  font-size: clamp(3rem, 6vw, 10rem);
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: transform cubic-bezier(1, 0, 0, 1) ease-in;
+}
+
+.main-p{
+  font-size: clamp(1.25rem, 1.0983rem + 0.6068vw, 1.875rem);
+  visibility: hidden;
+  transform: translateY(100px) ;
+  transition: transform cubic-bezier(1, 0, 0, 1) ease-in;
+}

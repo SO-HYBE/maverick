@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+
+      fontFamily: {
+        belanosima: ['var(--font-belanosima)'],
+        rubik: ['var(--font-rubik)']
+      },
+      
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

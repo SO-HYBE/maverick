@@ -41,10 +41,10 @@ export default function NavBar() {
                   M
                 </span>
                 </a>
-                <a href="/"><span className="menu-anim mt-1 menu-item cursor-pointer select-none md:mt-0">Work</span></a>
-                <a href="/"><span className="menu-anim mt-1 menu-item cursor-pointer select-none md:mt-0">Services</span></a>
-                <a className="menu-anim hidden md:block" href="/"><span className="menu-item cursor-pointer select-none">About Us</span></a>
-                <a href="/" className="menu-anim mt-1 flex flex-row md:mt-0"><span className="menu-item cursor-pointer font-bold text-l md:text-2xl select-none hover:skew-x-12 duration-500">Contact Us</span></a>
+                <a href="#work-section"><span className="menu-anim mt-1 menu-item cursor-pointer select-none md:mt-0">Work</span></a>
+                <a href="#services-section"><span className="menu-anim mt-1 menu-item cursor-pointer select-none md:mt-0">Services</span></a>
+                <a className="menu-anim hidden md:block" href="#about-section"><span className="menu-item cursor-pointer select-none">About Us</span></a>
+                <a href="#contact-section" className="menu-anim mt-1 flex flex-row md:mt-0"><span className="menu-item cursor-pointer font-bold text-l md:text-2xl select-none hover:skew-x-12 duration-500">Contact Us</span></a>
             </div>
         </div>
     )

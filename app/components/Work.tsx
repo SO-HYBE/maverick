@@ -1,15 +1,64 @@
 "use client"
 
 import Link from "next/link"
-import { Button } from "@/components/ui"
+import { Button } from "@/components/ui/button"
+import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
+import { useRef } from "react";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
 
 export default function Component() {
+  const workRef = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined') {
+      
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline();
+
+        tl.fromTo(".work-title",{
+          y:-100,
+          opacity:0,
+          visibility: "hidden"
+        }, {
+          y:0,
+          autoAlpha: 1,
+          scrollTrigger: {
+            trigger: ".work-title",
+            start: "-20% 50%",
+            end: "120% 30%",
+            scrub: true
+          }
+        })
+        .fromTo(".work-card",{
+          y: 100,
+          opacity:0,
+          visibility: "hidden",
+        }, {
+          y:0,
+          autoAlpha: 1,
+          stagger: 2,
+          scrollTrigger: {
+            trigger: ".work-title",
+            start: "-20% 50%",
+            end: "120% 30%",
+            scrub: true
+          }
+        })
+
+      }, workRef);
+
+      return () => ctx.revert(); 
+    }
+  }, []);
+
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-white text-black">
-      <div className="container grid max-w-6xl grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-6">
-        <h2 className="col-span-full text-3xl font-bold">Our Featured Projects</h2>
-        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-          <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
+    <section id="work-section" className="w-full py-12 md:py-24 lg:py-32 bg-white text-black font-rubik" ref={workRef}>
+      <div className="container grid grid-cols-1 gap-6 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-6">
+        <h2 className="work-title col-span-full text-3xl font-bold font-belanosima">Our Featured Projects</h2>
+        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl work-card">
+          <Link href="" className="absolute inset-0 z-10" prefetch={false}>
             <span className="sr-only">View project</span>
           </Link>
           <div className="p-6">
@@ -20,8 +69,8 @@ export default function Component() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-          <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
+        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl work-card">
+          <Link href="" className="absolute inset-0 z-10" prefetch={false}>
             <span className="sr-only">View project</span>
           </Link>
           <div className="p-6">
@@ -32,8 +81,8 @@ export default function Component() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-          <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
+        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl work-card">
+          <Link href="" className="absolute inset-0 z-10" prefetch={false}>
             <span className="sr-only">View project</span>
           </Link>
           <div className="p-6">
@@ -44,8 +93,8 @@ export default function Component() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-          <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
+        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl work-card">
+          <Link href="" className="absolute inset-0 z-10" prefetch={false}>
             <span className="sr-only">View project</span>
           </Link>
           <div className="p-6">
@@ -56,8 +105,8 @@ export default function Component() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-          <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
+        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl work-card">
+          <Link href="" className="absolute inset-0 z-10" prefetch={false}>
             <span className="sr-only">View project</span>
           </Link>
           <div className="p-6">
@@ -68,8 +117,8 @@ export default function Component() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-          <Link href="#" className="absolute inset-0 z-10" prefetch={false}>
+        <div className="relative overflow-hidden rounded-lg bg-white shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl work-card">
+          <Link href="" className="absolute inset-0 z-10" prefetch={false}>
             <span className="sr-only">View project</span>
           </Link>
           <div className="p-6">

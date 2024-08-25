@@ -1,0 +1,259 @@
+"use client"
+
+import Image from "next/image"
+import marketImg from "../../public/marketImg.jpg"
+import mlImg from "../../public/MLImg.jpg"
+import brandImg from "../../public/brandingImg.jpg"
+import webImg from "../../public/WSImg.jpg"
+import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect"
+import { useRef } from "react"
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+
+export default function Component() {
+
+  const servRef = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+
+  useIsomorphicLayoutEffect(() => {
+    if (typeof window !== 'undefined') {
+      
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline();
+
+        tl
+        .fromTo("#serv-card-1", 
+          {
+            y:-150,
+            opacity:0,
+            visibility: "hidden"
+          },
+          {
+            y:0,
+            autoAlpha:1,
+            scrollTrigger: {
+              trigger: "#serv-card-1",
+              start: "-20% 50%",
+              end: "120% 30%",
+              scrub: true
+            }
+          }
+        )
+        .fromTo("#serv-card-2", 
+          {
+            y:150,
+            opacity:0,
+            visibility: "hidden"
+          },
+          {
+            y:0,
+            autoAlpha:1,
+            scrollTrigger: {
+              trigger: "#serv-card-2",
+              start: "-20% 50%",
+              end: "120% 30%",
+              scrub: true
+            }
+          }
+        )
+        .fromTo("#serv-card-3", 
+          {
+            y:150,
+            opacity:0,
+            visibility: "hidden"
+          },
+          {
+            y:0,
+            autoAlpha:1,
+            scrollTrigger: {
+              trigger: "#serv-card-3",
+              start: "-20% 50%",
+              end: "120% 30%",
+              scrub: true
+            }
+          }
+        )
+        .fromTo("#serv-card-4", 
+          {
+            y:-150,
+            opacity:0,
+            visibility: "hidden"
+          },
+          {
+            y:0,
+            autoAlpha:1,
+            scrollTrigger: {
+              trigger: "#serv-card-4",
+              start: "-20% 50%",
+              end: "120% 30%",
+              scrub: true
+            }
+          }
+        )
+        .fromTo("#serv-card-5", 
+          {
+            y:-150,
+            opacity:0,
+            visibility: "hidden"
+          },
+          {
+            y:0,
+            autoAlpha:1,
+            scrollTrigger: {
+              trigger: "#serv-card-5",
+              start: "-20% 50%",
+              end: "120% 30%",
+              scrub: true
+            }
+          }
+        )
+        .fromTo("#serv-card-6", 
+          {
+            y:150,
+            opacity:0,
+            visibility: "hidden"
+          },
+          {
+            y:0,
+            autoAlpha:1,
+            scrollTrigger: {
+              trigger: "#serv-card-6",
+              start: "-20% 50%",
+              end: "120% 30%",
+              scrub: true
+            }
+          }
+        )
+        .fromTo("#serv-card-7", 
+          {
+            y:150,
+            opacity:0,
+            visibility: "hidden"
+          },
+          {
+            y:0,
+            autoAlpha:1,
+            scrollTrigger: {
+              trigger: "#serv-card-7",
+              start: "-20% 50%",
+              end: "120% 30%",
+              scrub: true
+            }
+          }
+        )
+        .fromTo("#serv-card-8", 
+          {
+            y:-150,
+            opacity:0,
+            visibility: "hidden"
+          },
+          {
+            y:0,
+            autoAlpha:1,
+            scrollTrigger: {
+              trigger: "#serv-card-8",
+              start: "-20% 50%",
+              end: "120% 30%",
+              scrub: true
+            }
+          }
+        )
+
+
+      }, servRef);
+
+      return () => ctx.revert(); 
+    }
+  }, []);
+
+
+    return (
+      <section id="services-section" className="w-full text-wrap py-12 md:py-24 lg:py-32 bg-black text-white" ref={servRef}>
+        <div className="container grid gap-12 px-4 md:px-6">
+          <div className="grid gap-12 md:grid-cols-2 items-center">
+            <div id="serv-card-1" className="space-y-4 text-wrap">
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-black font-bold font-belanosima">Marketing</div>
+              <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl font-belanosima">Elevate Your Brand&apos;s Reach</h3>
+              <p className="text-muted-foreground md:text-xl/relaxed font-rubik">
+                Our marketing experts craft tailored strategies to amplify your brand&apos;s visibility and engagement across
+                digital channels.
+              </p>
+            </div>
+            <Image
+              id="serv-card-2"
+              priority
+              src={marketImg}
+              alt="Marketing"
+              width={600}
+              height={400}
+              className="rounded-lg overflow-hidden"
+              style={{ aspectRatio: "600/400", objectFit: "cover" }}
+            />
+          </div>
+          <div className="grid gap-12 md:grid-cols-2 items-center">
+            <Image
+              id="serv-card-3"
+              priority
+              src={brandImg}
+              alt="Branding"
+              width={600}
+              height={400}
+              className="rounded-lg overflow-hidden"
+              style={{ aspectRatio: "600/400", objectFit: "cover" }}
+            />
+            <div id="serv-card-4" className="space-y-4 text-wrap">
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-black font-bold font-belanosima">Branding</div>
+              <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl font-belanosima">Crafting Memorable Identities</h3>
+              <p className="text-muted-foreground md:text-xl/relaxed font-rubik">
+                Our branding experts develop unique and impactful visual identities that captivate your audience and
+                elevate your business.
+              </p>
+            </div>
+          </div>
+          <div className="grid gap-12 md:grid-cols-2 items-center">
+            <div id="serv-card-5" className="space-y-4 text-wrap">
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-black font-bold font-belanosima">Machine Learning</div>
+              <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl font-belanosima">Unleash the Power of AI</h3>
+              <p className="text-muted-foreground md:text-xl/relaxed font-rubik">
+                Our machine learning experts harness the latest advancements in AI to build intelligent solutions that
+                drive business transformation.
+              </p>
+            </div>
+            <Image
+              id="serv-card-6"
+              priority
+              src={mlImg}
+              alt="Machine Learning"
+              width={600}
+              height={400}
+              className="rounded-lg overflow-hidden"
+              style={{ aspectRatio: "600/400", objectFit: "cover" }}
+            />
+          </div>
+          <div className="grid gap-12 md:grid-cols-2 items-center">
+            <Image
+              id="serv-card-7"
+              priority
+              src={webImg}
+              alt="Web Solutions"
+              width={600}
+              height={400}
+              className="rounded-lg overflow-hidden"
+              style={{ aspectRatio: "600/400", objectFit: "cover" }}
+            />
+            <div id="serv-card-8" className="space-y-4 text-wrap">
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-black font-bold font-belanosima">Web Solutions</div>
+              <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl font-belanosima">
+                Crafting Exceptional Digital Experiences
+              </h3>
+              <p className="text-muted-foreground md:text-xl/relaxed font-rubik">
+                Our web development experts design and build custom, responsive websites and web applications that
+                captivate your audience and drive business growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
