@@ -41,7 +41,7 @@ export default function CreatePost(){
   }, []);
 
     return(
-<main id="contact-section" className="flex items-center justify-center text-wrap h-[170vh]">
+<main id="contact-section" className="flex items-center justify-center text-wrap h-[210vh] md:h-full">
   <div className="font-rubik bg-black flex items-center justify-center h-full flex-col w-full px-6 md:px-8 lg:px-12">
     <div className="whitespace-pre relative mb-12 text-center mt-20" ref={createRef}>
       <span className="title-create cursor-default text-white font-belanosima hover:text-black text-5xl sm:text-6xl">Talk </span>
@@ -81,7 +81,7 @@ export default function CreatePost(){
         />
       </div>
     </div>
-    <button className="mt-10 w-full md:w-auto font-belanosima bg-black text-white p-4 rounded-lg border-4 border-white text-xl hover:bg-white hover:text-[#eb5e46] duration-500 hover:shadow-inner hover:tracking-[0.75em] hover:font-bold hover:whitespace-pre" type="submit"> SUBMIT</button>
+    <button className="my-10 w-full md:w-auto font-belanosima bg-black text-white p-4 rounded-lg border-4 border-white text-xl hover:bg-white hover:text-[#eb5e46] duration-500 hover:shadow-inner hover:tracking-[0.75em] hover:font-bold hover:whitespace-pre" type="submit"> SUBMIT</button>
   </div>
 </main>
 

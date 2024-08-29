@@ -58,7 +58,7 @@ export default function Component() {
 
 
     return (
-      <section id="about-section" className="w-full py-12 md:py-24 lg:py-32 bg-white font-rubik" ref={aboutRef}>
+      <section id="about-section" className="w-full py-12 md:py-24 lg:py-32 bg-white font-rubik overflow-hidden" ref={aboutRef}>
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
           <div className="about-text space-y-4">
             <div className="space-y-2 text-wrap">

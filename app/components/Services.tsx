@@ -34,8 +34,8 @@ export default function Component() {
             autoAlpha:1,
             scrollTrigger: {
               trigger: "#serv-card-1",
-              start: "-20% 50%",
-              end: "120% 30%",
+              start: "-35% 50%",
+              end: "110% 30%",
               scrub: true
             }
           }
@@ -51,8 +51,8 @@ export default function Component() {
             autoAlpha:1,
             scrollTrigger: {
               trigger: "#serv-card-2",
-              start: "-20% 50%",
-              end: "120% 30%",
+              start: "-35% 50%",
+              end: "110% 30%",
               scrub: true
             }
           }
@@ -68,8 +68,8 @@ export default function Component() {
             autoAlpha:1,
             scrollTrigger: {
               trigger: "#serv-card-3",
-              start: "-20% 50%",
-              end: "120% 30%",
+              start: "-35% 50%",
+              end: "110% 30%",
               scrub: true
             }
           }
@@ -85,8 +85,8 @@ export default function Component() {
             autoAlpha:1,
             scrollTrigger: {
               trigger: "#serv-card-4",
-              start: "-20% 50%",
-              end: "120% 30%",
+              start: "-35% 50%",
+              end: "110% 30%",
               scrub: true
             }
           }
@@ -102,8 +102,8 @@ export default function Component() {
             autoAlpha:1,
             scrollTrigger: {
               trigger: "#serv-card-5",
-              start: "-20% 50%",
-              end: "120% 30%",
+              start: "-35% 50%",
+              end: "110% 30%",
               scrub: true
             }
           }
@@ -119,8 +119,8 @@ export default function Component() {
             autoAlpha:1,
             scrollTrigger: {
               trigger: "#serv-card-6",
-              start: "-20% 50%",
-              end: "120% 30%",
+              start: "-35% 50%",
+              end: "110% 30%",
               scrub: true
             }
           }
@@ -136,8 +136,8 @@ export default function Component() {
             autoAlpha:1,
             scrollTrigger: {
               trigger: "#serv-card-7",
-              start: "-20% 50%",
-              end: "120% 30%",
+              start: "-35% 50%",
+              end: "110% 30%",
               scrub: true
             }
           }
@@ -153,8 +153,8 @@ export default function Component() {
             autoAlpha:1,
             scrollTrigger: {
               trigger: "#serv-card-8",
-              start: "-20% 50%",
-              end: "120% 30%",
+              start: "-20% 60%",
+              end: "110% 30%",
               scrub: true
             }
           }
@@ -172,7 +172,7 @@ export default function Component() {
       <section id="services-section" className="w-full text-wrap py-12 md:py-24 lg:py-32 bg-black text-white" ref={servRef}>
         <div className="container grid gap-12 px-4 md:px-6">
           <div className="grid gap-12 md:grid-cols-2 items-center">
-            <div id="serv-card-1" className="space-y-4 text-wrap">
+            <div id="serv-card-1" className="space-y-4 text-wrap order-1">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-black font-bold font-belanosima">Marketing</div>
               <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl font-belanosima">Elevate Your Brand&apos;s Reach</h3>
               <p className="text-muted-foreground md:text-xl/relaxed font-rubik">
@@ -187,7 +187,7 @@ export default function Component() {
               alt="Marketing"
               width={600}
               height={400}
-              className="rounded-lg overflow-hidden"
+              className="rounded-lg overflow-hidden order-2"
               style={{ aspectRatio: "600/400", objectFit: "cover" }}
             />
           </div>
@@ -199,10 +199,10 @@ export default function Component() {
               alt="Branding"
               width={600}
               height={400}
-              className="rounded-lg overflow-hidden"
+              className="rounded-lg overflow-hidden order-4 md:order-3"
               style={{ aspectRatio: "600/400", objectFit: "cover" }}
             />
-            <div id="serv-card-4" className="space-y-4 text-wrap">
+            <div id="serv-card-4" className="space-y-4 text-wrap order-3 md:order-4">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-black font-bold font-belanosima">Branding</div>
               <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl font-belanosima">Crafting Memorable Identities</h3>
               <p className="text-muted-foreground md:text-xl/relaxed font-rubik">
@@ -212,7 +212,7 @@ export default function Component() {
             </div>
           </div>
           <div className="grid gap-12 md:grid-cols-2 items-center">
-            <div id="serv-card-5" className="space-y-4 text-wrap">
+            <div id="serv-card-5" className="space-y-4 text-wrap order-5 md:order-5">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-black font-bold font-belanosima">Machine Learning</div>
               <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl font-belanosima">Unleash the Power of AI</h3>
               <p className="text-muted-foreground md:text-xl/relaxed font-rubik">
@@ -227,7 +227,7 @@ export default function Component() {
               alt="Machine Learning"
               width={600}
               height={400}
-              className="rounded-lg overflow-hidden"
+              className="rounded-lg overflow-hidden order-6 md:order-6"
               style={{ aspectRatio: "600/400", objectFit: "cover" }}
             />
           </div>
@@ -239,10 +239,10 @@ export default function Component() {
               alt="Web Solutions"
               width={600}
               height={400}
-              className="rounded-lg overflow-hidden"
+              className="rounded-lg overflow-hidden order-8 md:order-7"
               style={{ aspectRatio: "600/400", objectFit: "cover" }}
             />
-            <div id="serv-card-8" className="space-y-4 text-wrap">
+            <div id="serv-card-8" className="space-y-4 text-wrap order-7 md:order-8">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm text-black font-bold font-belanosima">Web Solutions</div>
               <h3 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl font-belanosima">
                 Crafting Exceptional Digital Experiences
